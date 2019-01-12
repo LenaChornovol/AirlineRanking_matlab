@@ -1,0 +1,49 @@
+[System]
+Name='lab1_1'
+Type='sugeno'
+Version=2.0
+NumInputs=3
+NumOutputs=1
+NumRules=3
+AndMethod='min'
+OrMethod='max'
+ImpMethod='prod'
+AggMethod='max'
+DefuzzMethod='wtaver'
+
+[Input1]
+Name='OnTimePerformance'
+Range=[7.2 9.2]
+NumMFs=3
+MF1='minimum':'trimf',[NaN NaN NaN]
+MF2='medium':'trimf',[NaN NaN NaN]
+MF3='maximum':'trimf',[NaN NaN NaN]
+
+[Input2]
+Name='QualityofService'
+Range=[6 9.8]
+NumMFs=3
+MF1='minimum':'trimf',[NaN NaN NaN]
+MF2='medium':'trimf',[NaN NaN NaN]
+MF3='maximum':'trimf',[NaN NaN NaN]
+
+[Input3]
+Name='ClaimProcessing'
+Range=[6.8 9.5]
+NumMFs=3
+MF1='minimum':'trimf',[NaN NaN NaN]
+MF2='medium':'trimf',[NaN NaN NaN]
+MF3='maximum':'trimf',[NaN NaN NaN]
+
+[Output1]
+Name='airline-rankings'
+Range=[7.65 9.08]
+NumMFs=3
+MF1='minimum':'linear',[0.324912766846275 0.330205809081586 0.329047939388881 0.115800646264404]
+MF2='medium':'linear',[0.324912765016935 0.330205814636001 0.329047937492047 0.115800646376483]
+MF3='maximum':'linear',[0.324912763191517 0.330205808614298 0.32904793655162 0.115800646469609]
+
+[Rules]
+1 1 1, 1 (1) : 1
+2 2 2, 2 (1) : 1
+3 3 3, 3 (1) : 1
